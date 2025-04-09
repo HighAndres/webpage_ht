@@ -1,24 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Cumplimiento NOM035 STPS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-    <div class="max-w-4xl mx-auto px-6 py-12">
-        <h1 class="text-4xl font-bold text-orange-500 mb-6">Cumplimiento NOM035 STPS</h1>
-        <p class="text-lg leading-relaxed mb-6">Mejora el bienestar emocional de tu equipo. Evaluaciones de riesgo psicosocial, medidas preventivas y soporte digital para cumplir con la NOM035.</p>
-        <ul class="list-disc list-inside mb-6 text-gray-700">
-            <li>Servicio personalizado y seguro</li>
-            <li>Equipo con experiencia comprobada</li>
-            <li>Enfoque estratégico y humano</li>
-        </ul>
-        <a href="index.html#servicios" class="inline-block mt-4 text-white bg-orange-500 hover:bg-orange-600 font-semibold px-6 py-3 rounded-lg transition">
-            ← Volver a Servicios
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cumplimiento NOM035 STPS | Human Talent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-orange-400 text-white p-4">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <a href="index.html">
+          <img src="images/ht_logo_g (1).png" alt="Logo" class="h-14 md:h-20 w-auto">
         </a>
-    </div>
-</body>
+        <nav class="flex flex-wrap justify-center gap-4 md:gap-6 text-base md:text-lg font-medium">
+          <a href="index.html#home">Inicio</a>
+          <a href="index.html#soluciones">Soluciones</a>
+          <a href="index.html#nosotros">Nosotros</a>
+          <a href="index.html#blog">Blog</a>
+          <a href="index.html#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero específico para NOM035 -->
+    <section class="relative bg-cover bg-center min-h-[50vh] flex items-center justify-center text-white" style="background-image: url('images/nom035-bg.jpg');">
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Cumplimiento con NOM035 STPS</h1>
+        <p class="text-lg">Impulsa el bienestar psicoemocional en tu organización con herramientas digitales.</p>
+      </div>
+    </section>
+
+    <!-- Contenido Detallado -->
+    <section class="max-w-6xl mx-auto py-16 px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="images/nom035-detail.jpg" alt="Cumplimiento NOM035" class="rounded-lg shadow-lg">
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange-500 mb-4">¿Qué ofrece este servicio?</h2>
+          <p class="mb-6">
+            Nuestra solución tecnológica te permite cumplir de forma práctica y efectiva con los requerimientos de la Norma Oficial Mexicana NOM035, enfocada en identificar y prevenir los factores de riesgo psicosocial en el entorno laboral.
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-gray-700">
+            <li>Diagnóstico de riesgo psicosocial.</li>
+            <li>Gestión digital de evidencias y documentación.</li>
+            <li>Reportes y análisis automatizados.</li>
+            <li>Acompañamiento profesional continuo.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Beneficios adicionales -->
+      <div class="mt-16 grid md:grid-cols-3 gap-6 text-center">
+        <div class="p-6 bg-white shadow-md rounded-xl">
+          <h3 class="text-xl font-semibold text-emerald-400">Bienestar laboral</h3>
+          <p class="mt-2">Promueve una cultura de cuidado emocional en tu organización.</p>
+        </div>
+
+        <div class="p-6 bg-white shadow-md rounded-xl">
+          <h3 class="text-xl font-semibold text-emerald-400">Cumplimiento normativo</h3>
+          <p class="mt-2">Evita sanciones mediante una implementación profesional y verificada.</p>
+        </div>
+
+        <div class="p-6 bg-white shadow-md rounded-xl">
+          <h3 class="text-xl font-semibold text-emerald-400">Gestión digital eficiente</h3>
+          <p class="mt-2">Organiza, consulta y respalda toda la documentación desde un solo lugar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-orange-400 text-white py-12 px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">Crea un entorno laboral saludable y conforme a la ley</h2>
+      <p class="mb-6">Contáctanos y conoce cómo nuestra solución puede ayudarte a cumplir con la NOM035 STPS.</p>
+      <a href="index.html#contacto" class="inline-block bg-emerald-400 text-black px-6 py-3 rounded shadow hover:bg-emerald-500 transition">Solicita información</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 text-sm">
+      © 2025 Human Talent | Desarrollado por <span class="font-semibold tracking-wide">ACLS</span>. Todos los derechos reservados.
+    </footer>
+  </body>
 </html>
