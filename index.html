@@ -19,32 +19,28 @@
       <i class="fab fa-whatsapp fa-lg"></i>
       </a>
     
-    <!-- Header -->
-    <header class="bg-orange-400 text-white p-4">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-        <!-- Logo más pequeño en móviles -->
-        <img src="images/ht_black.png" alt="Logo" class="h-14 md:h-20 w-auto">
-    
-        <!-- Menú en línea en pantallas medianas y grandes -->
-        <nav class="flex flex-wrap justify-center gap-4 md:gap-6 text-base md:text-lg font-medium">
-          <a href="#home" class="relative group transition duration-300 hover:text-white">
-            Inicio
-            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="#servicios" class="relative group transition duration-300 hover:text-white">
-            Soluciones
-            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="#contacto" class="relative group transition duration-300 hover:text-white">
-            Contacto
-            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="/en/index.html" class="ml-4 inline-block bg-white text-orange-500 px-3 py-1 rounded font-semibold hover:bg-gray-100 transition">
-            EN
-          </a>
-        </nav>
-      </div>
-    </header>
+
+        <!-- Header -->
+        <header class="bg-orange-400 text-white p-4">
+          <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <!-- Logo -->
+            <img src="images/ht_black.png" alt="Logo" class="h-14 md:h-20 w-auto">
+        
+            <!-- Botón hamburguesa para móviles -->
+            <button id="menu-toggle" class="md:hidden text-3xl focus:outline-none">
+              <i class="fas fa-bars"></i>
+            </button>
+        
+            <!-- Menú navegación -->
+            <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center absolute md:static top-full left-0 w-full md:w-auto bg-orange-400 md:bg-transparent px-6 md:px-0 pt-4 md:pt-0 space-y-4 md:space-y-0 md:space-x-6 text-base md:text-lg font-medium z-40">
+              <a href="#home" class="block hover:text-white transition">Inicio</a>
+              <a href="#soluciones" class="block hover:text-white transition">Soluciones</a>
+              <a href="#contacto" class="block hover:text-white transition">Contacto</a>
+              <a href="/index.html" class="inline-block bg-white text-orange-500 px-3 py-1 rounded font-semibold hover:bg-gray-100 transition">ES</a>
+            </nav>
+          </div>
+        </header>
 
     <!-- Hero -->
    
