@@ -11,7 +11,7 @@
   </head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <body class="bg-white text-gray-800 font-sans">
-    
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Botón flotante de WhatsApp -->
     <a href="https://wa.me/525527970496" target="_blank" 
       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition animate-bounce"
@@ -58,7 +58,7 @@
       </section>
 
     <!-- Beneficios -->
-    <section id="beneficios" class="bg-gray-100 py-20 px-6">
+    <section id="beneficios" class="bg-gray-100 py-20 px-6" data-aos="fade-up">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-3xl font-bold text-orange-500 mb-12 text-center">Beneficios de nuestros servicios</h2>
           <div class="space-y-12">
@@ -301,18 +301,53 @@
     <!-- Modales-->
     <div id="modales-container"></div>
 
+
+    <!-- Botón "Volver arriba" -->
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+     id="scrollTopBtn"
+      aria-label="Volver arriba"
+      class="fixed bottom-24 right-6 p-3 md:p-4 bg-orange-500 text-white rounded-full shadow-lg hover:bg-orange-600 transition-all z-50 hidden">
+      <i class="fas fa-chevron-up"></i>
+     </button>
+
     <!-- Scrits-->
-      <script src="js/clientes-carousel.js"></script>
-      <script type="module">
-        import { toggleModal } from "./js/modales.js";
-      
-        // Asignar eventos a todos los botones con atributo data-modal
-        document.querySelectorAll("[data-modal]").forEach(button => {
-          button.addEventListener("click", () => {
-            const modalId = button.getAttribute("data-modal");
-            toggleModal(modalId);
-          });
-        });
-      </script>
+  <!-- Carousel -->
+<script src="js/clientes-carousel.js"></script>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  });
+</script>
+
+
+<script>
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.remove("hidden");
+    } else {
+      scrollTopBtn.classList.add("hidden");
+    }
+  });
+</script>
+
+<!-- Módulos JS (modales) -->
+<script type="module">
+  import { toggleModal } from "./js/modales.js";
+
+  // Asignar eventos a todos los botones con atributo data-modal
+  document.querySelectorAll("[data-modal]").forEach(button => {
+    button.addEventListener("click", () => {
+      const modalId = button.getAttribute("data-modal");
+      toggleModal(modalId);
+    });
+  });
+</script>
   </body>
 </html>
