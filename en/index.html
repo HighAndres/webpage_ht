@@ -9,31 +9,35 @@
     <link rel="stylesheet" href="css/styles.css">
 
   </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <body class="bg-white text-gray-800 font-sans">
+
+    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" 
+    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition animate-bounce"
+    aria-label="Chat on WhatsApp">
+   <i class="fab fa-whatsapp fa-lg"></i>
+ </a>
+
+
+
     <!-- Header -->
     <header class="bg-orange-400 text-white p-4">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-        <!-- Logo más pequeño en móviles -->
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        
+        <!-- Logo -->
         <img src="images/ht_black.png" alt="Logo" class="h-14 md:h-20 w-auto">
     
-        <!-- Menú en línea en pantallas medianas y grandes -->
-        <nav class="flex flex-wrap justify-center gap-4 md:gap-6 text-base md:text-lg font-medium">
-          <a href="#home" class="relative group transition duration-300 hover:text-white">
-            Home
-            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="#soluciones" class="relative group transition duration-300 hover:text-white">
-            Solutions
-            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-          </a>
-         
-          <a href="#contacto" class="relative group transition duration-300 hover:text-white">
-            Contact
-            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="/index.html" class="ml-4 inline-block bg-white text-orange-500 px-3 py-1 rounded font-semibold hover:bg-gray-100 transition">
-            ES
-          </a>
+        <!-- Botón hamburguesa para móviles -->
+        <button id="menu-toggle" class="md:hidden text-3xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+    
+        <!-- Menú navegación -->
+        <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center absolute md:static top-full left-0 w-full md:w-auto bg-orange-400 md:bg-transparent px-6 md:px-0 pt-4 md:pt-0 space-y-4 md:space-y-0 md:space-x-6 text-base md:text-lg font-medium z-40">
+          <a href="#home" class="block hover:text-white transition">Home</a>
+          <a href="#soluciones" class="block hover:text-white transition">Solutions</a>
+          <a href="#contacto" class="block hover:text-white transition">Contact</a>
+          <a href="/index.html" class="inline-block bg-white text-orange-500 px-3 py-1 rounded font-semibold hover:bg-gray-100 transition">ES</a>
         </nav>
       </div>
     </header>
@@ -238,12 +242,55 @@
           </form>
         </div>
       </section>
+
+<!-- Ubicación -->
+<section id="ubicacion" class="bg-gray-100 py-16 px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-orange-500 mb-6">Nuestra Ubicación</h2>
+    <p class="mb-8 text-gray-700">Encuéntranos en nuestra oficina para una consulta personalizada.</p>
+    
+    <div class="rounded-xl overflow-hidden shadow-lg">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.161527123497!2d-99.1332086846382!3d19.43260708688713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92c362b2baf%3A0x3a9e423f350a637a!2sCDMX!5e0!3m2!1ses-419!2smx!4v1614873722993!5m2!1ses-419!2smx"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="w-full h-[450px]">
+      </iframe>
+    </div>
+  </div>
+</section>
+      
+
   
 
     <!-- Footer -->
     <footer class="bg-orange-400 text-center py-6 text-sm text-white">
         © 2025 Human Talent | Developed by <span class="font-semibold tracking-wide">ACLS</span>. All rights reserved.
+         <!-- Íconos sociales centrados -->
+    <div class="flex justify-center space-x-6 text-2xl">
+      <a href="https://www.linkedin.com/" target="_blank" class="hover:text-white transition">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" class="hover:text-white transition">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" class="hover:text-white transition">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/" target="_blank" class="hover:text-white transition">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+   
       </footer>
+
+    
 
 
       <div id="modalHeadhunting" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
@@ -261,6 +308,17 @@
     <div id="modales-container"></div>
 
     <!-- Scrits-->
+
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const navMenu = document.getElementById("nav-menu");
+    
+      toggleBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
+        navMenu.classList.toggle("flex");
+      });
+    </script>
+    
       <script src="js/clientes-carousel.js"></script>
       <script type="module">
         import { toggleModal } from "./js/modales.js";
