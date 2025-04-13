@@ -22,7 +22,7 @@
 
     <!-- Botón flotante de WhatsApp (ajustado para estar arriba todo el tiempo) -->
     <a href="https://wa.me/525527970496" target="_blank" 
-      class="fixed top-6 right-6 bg-green-500 hover:bg-green-600 text-white p-3 md:p-4 rounded-full shadow-lg z-50 transition"
+      class="fixed top-24 right-6 bg-green-500 hover:bg-green-600 text-white p-3 md:p-4 rounded-full shadow-lg z-50 transition"
       aria-label="Chat on WhatsApp">
       <i class="fab fa-whatsapp fa-lg"></i>
     </a>
@@ -231,23 +231,25 @@
 
     <!-- Contacto -->
     <section id="contactoEN" class="bg-gray-300 text-gray-800 py-16 px-6">
-        <div class="max-w-xl mx-auto text-center">
-          <h3 class="text-3xl font-bold mb-4 text-orange-500">Ready to take your business to the next level?</h3>
-          <p class="mb-10">Contact us today for personalized advice.</p>
-          <form action="https://formsubmit.co/soporte@thehumantalent.com" method="POST" class="space-y-6">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
-            <div class="grid md:grid-cols-2 gap-6">
-              <input type="text" name="nombre" placeholder="Name" required class="w-full p-3 rounded bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-400">
-              <input type="email" name="correo" placeholder="E-mail" required class="w-full p-3 rounded bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-400">
-            </div>
-            <textarea name="mensaje" rows="5" placeholder="Message" required class="w-full p-3 rounded bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-400"></textarea>
-            <button type="submit" class="bg-emerald-400 text-black font-semibold px-6 py-3 rounded shadow hover:bg-emerald-500 transition">
-              Send message
-            </button>
-          </form>
-        </div>
-      </section>
+      <div class="max-w-xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-4 text-orange-500">Ready to take your business to the next level?</h3>
+        <p class="mb-10">Contact us today for a personalized consultation.</p>
+        <form id="contact-form" action="https://formsubmit.co/soporte@thehumantalent.com" method="POST" class="space-y-6">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+    
+          <div class="grid md:grid-cols-2 gap-6">
+            <input type="text" name="nombre" placeholder="Name" required class="w-full p-3 rounded bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-400">
+            <input type="email" name="correo" placeholder="Email" required class="w-full p-3 rounded bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-400">
+          </div>
+          <textarea name="Message" rows="5" placeholder="Tu mensaje" required class="w-full p-3 rounded bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-400"></textarea>
+          <button type="submit" class="bg-emerald-400 text-black font-semibold px-6 py-3 rounded shadow hover:bg-emerald-500 transition">
+            Send message
+          </button>
+        </form>
+        <p id="form-status" class="mt-4 text-sm"></p>
+      </div>
+    </section>
 
 <!-- Ubicación -->
 <section id="ubicacionEN" class="bg-gray-100 py-16 px-6">
