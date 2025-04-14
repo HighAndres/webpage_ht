@@ -16,7 +16,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="bg-white text-gray-800 font-sans">
-
+    <script src="js/submenu.js"></script>
     <!-- Sección de Inicio para anclaje -->
     <section id="home"></section>
 
@@ -38,13 +38,32 @@
           <i class="fas fa-bars"></i>
         </button>
 
-        <!-- Menú de navegación -->
-        <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center absolute md:static top-[70px] left-0 w-full md:w-auto bg-orange-400 md:bg-transparent px-6 md:px-0 pt-4 md:pt-0 space-y-4 md:space-y-0 md:space-x-6 text-base md:text-lg font-medium z-40">
-          <a href="#home" class="block hover:text-white transition">Inicio</a>
-          <a href="#servicios" class="block hover:text-white transition">Soluciones</a>
-          <a href="#contacto" class="block hover:text-white transition">Contacto</a>
-          <a href="en/index.html" class="inline-block bg-white text-orange-500 px-3 py-1 rounded font-semibold hover:bg-gray-100 transition">EN</a>
-        </nav>
+       <!-- Menú de navegación -->
+<nav id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center absolute md:static top-[70px] left-0 w-full md:w-auto bg-orange-400 md:bg-transparent px-6 md:px-0 pt-4 md:pt-0 space-y-4 md:space-y-0 md:space-x-6 text-base md:text-lg font-medium z-40">
+  <a href="#home" class="block hover:text-white transition">Inicio</a>
+
+  <!-- Soluciones con submenú -->
+<div class="relative group" id="soluciones-dropdown">
+  <button id="soluciones-toggle" class="block hover:text-white transition focus:outline-none">
+    Soluciones
+  </button>
+  <div id="soluciones-menu" class="absolute left-0 mt-2 bg-white text-gray-800 shadow-lg rounded w-72
+              opacity-0 group-hover:opacity-100 invisible group-hover:visible 
+              transition duration-300 z-50 md:opacity-0 md:invisible md:group-hover:opacity-100 md:group-hover:visible">
+    <a href="servicio-nomina.html" class="block px-4 py-2 hover:bg-orange-100">Administración e Maquila de Nómina / Payrolling</a>
+    <a href="servicio-headhunting.html" class="block px-4 py-2 hover:bg-orange-100">Headhunting y reclutamiento estratégico</a>
+    <a href="servicio-especializados.html" class="block px-4 py-2 hover:bg-orange-100">Servicios especializados</a>
+    <a href="servicio-nom035.html" class="block px-4 py-2 hover:bg-orange-100">Cumplimiento con ley federal de la norma NOM035</a>
+    <a href="servicio-nom037.html" class="block px-4 py-2 hover:bg-orange-100">Cumplimiento con ley federal de la norma NOM037</a>
+    <a href="servicio-elearning.html" class="block px-4 py-2 hover:bg-orange-100">E-learning y LMS</a>
+    <a href="servicio-clima.html" class="block px-4 py-2 hover:bg-orange-100">Evaluación del clima organizacional</a>
+    <a href="servicio-liderazgo.html" class="block px-4 py-2 hover:bg-orange-100">Evaluación de Liderazgo por Competencias</a>
+  </div>
+</div>
+
+  <a href="#contacto" class="block hover:text-white transition">Contacto</a>
+  <a href="en/index.html" class="inline-block bg-white text-orange-500 px-3 py-1 rounded font-semibold hover:bg-gray-100 transition">EN</a>
+</nav>
       </div>
     </header>
 
