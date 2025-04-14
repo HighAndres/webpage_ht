@@ -26,4 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
         solucionesMenu.classList.toggle("visible");
       }
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const navMenu = document.getElementById("nav-menu");
+  
+      menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
+      });
+    });
   });
