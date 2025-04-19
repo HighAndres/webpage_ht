@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link rel="icon" href="images/ht_logo_g.png" type="image/png">
+
   </head>
   <body class="bg-white text-gray-800 font-sans">
-    <script src="js/submenu.js"></script>
     <!-- Sección de Inicio para anclaje -->
     <section id="home"></section>
 
@@ -28,44 +29,44 @@
       <i class="fab fa-whatsapp fa-lg"></i>
     </a>
 
-    <!-- Header -->
-    <header class="relative bg-orange-400 text-white p-4">
-      <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <img src="images/ht_black.png" alt="Logo" class="h-14 md:h-20 w-auto">
+   <!-- Header -->
+   <header class="relative bg-orange-400 text-white p-4 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
+      <!-- Logo -->
+      <img src="images/ht_black.png" alt="Logo" class="h-14 md:h-20 w-auto mb-2 md:mb-0">
+  
+      <!-- Botón hamburguesa -->
+      <button id="menu-toggle" class="md:hidden text-3xl focus:outline-none" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Menú de navegación -->
+      <nav id="nav-menu" class="w-full md:w-auto hidden md:flex flex-col md:flex-row md:items-center transform scale-y-0 origin-top transition-transform duration-300 ease-in-out md:transform-none md:scale-y-100 md:space-x-6 text-base md:text-lg font-medium">
+        <a href="#home" class="block px-4 py-2 md:p-0 hover:text-white transition">Inicio</a>
+  
+        <!-- Soluciones -->
+        <div class="relative group md:static">
+          <button id="soluciones-toggle" class="block px-4 py-2 md:p-0 hover:text-white transition focus:outline-none md:cursor-default">
+            Soluciones
+          </button>
+          <div id="soluciones-menu" class="hidden absolute md:static md:group-hover:block left-0 mt-2 md:mt-0 bg-white text-gray-800 shadow-lg md:shadow-none rounded md:rounded-none w-72 md:w-auto z-50 md:bg-transparent md:text-white md:space-y-0">
 
-        <!-- Botón hamburguesa -->
-        <button id="menu-toggle" class="md:hidden text-3xl focus:outline-none">
-          <i class="fas fa-bars"></i>
-        </button>
-
-       <!-- Menú de navegación -->
-<nav id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center absolute md:static top-[70px] left-0 w-full md:w-auto bg-orange-400 md:bg-transparent px-6 md:px-0 pt-4 md:pt-0 space-y-4 md:space-y-0 md:space-x-6 text-base md:text-lg font-medium z-40">
-  <a href="#home" class="block hover:text-white transition">Inicio</a>
-
-  <!-- Soluciones con submenú -->
-<div class="relative group" id="soluciones-dropdown">
-  <button id="soluciones-toggle" class="block hover:text-white transition focus:outline-none">
-    Soluciones
-  </button>
-  <div id="soluciones-menu" class="absolute left-0 mt-2 bg-white text-gray-800 shadow-lg rounded w-72
-              opacity-0 group-hover:opacity-100 invisible group-hover:visible 
-              transition duration-300 z-50 md:opacity-0 md:invisible md:group-hover:opacity-100 md:group-hover:visible">
-    <a href="servicio-nomina.html" class="block px-4 py-2 hover:bg-orange-100">Administración e Maquila de Nómina / Payrolling</a>
-    <a href="servicio-headhunting.html" class="block px-4 py-2 hover:bg-orange-100">Headhunting y reclutamiento estratégico</a>
-    <a href="servicio-especializados.html" class="block px-4 py-2 hover:bg-orange-100">Servicios especializados</a>
-    <a href="servicio-nom035.html" class="block px-4 py-2 hover:bg-orange-100">Cumplimiento con ley federal de la norma NOM035</a>
-    <a href="servicio-nom037.html" class="block px-4 py-2 hover:bg-orange-100">Cumplimiento con ley federal de la norma NOM037</a>
-    <a href="servicio-elearning.html" class="block px-4 py-2 hover:bg-orange-100">E-learning y LMS</a>
-    <a href="servicio-clima.html" class="block px-4 py-2 hover:bg-orange-100">Evaluación del clima organizacional</a>
-    <a href="servicio-liderazgo.html" class="block px-4 py-2 hover:bg-orange-100">Evaluación de Liderazgo por Competencias</a>
-  </div>
-</div>
-
-  <a href="#contacto" class="block hover:text-white transition">Contacto</a>
-  <a href="en/index.html" class="inline-block bg-white text-orange-500 px-3 py-1 rounded font-semibold hover:bg-gray-100 transition">EN</a>
-</nav>
-      </div>
-    </header>
+            <a href="servicio-nomina.html" class="block px-4 py-2 hover:bg-orange-100 md:hover:bg-orange-500 md:px-0 md:py-1">Nómina</a>
+            <a href="servicio-headhunting.html" class="block px-4 py-2 hover:bg-orange-100 md:hover:bg-orange-500 md:px-0 md:py-1">Headhunting</a>
+            <a href="servicio-especializados.html" class="block px-4 py-2 hover:bg-orange-100 md:hover:bg-orange-500 md:px-0 md:py-1">Especializados</a>
+            <a href="servicio-nom035.html" class="block px-4 py-2 hover:bg-orange-100 md:hover:bg-orange-500 md:px-0 md:py-1">NOM035</a>
+            <a href="servicio-nom037.html" class="block px-4 py-2 hover:bg-orange-100 md:hover:bg-orange-500 md:px-0 md:py-1">NOM037</a>
+            <a href="servicio-elearning.html" class="block px-4 py-2 hover:bg-orange-100 md:hover:bg-orange-500 md:px-0 md:py-1">E-learning</a>
+            <a href="servicio-clima.html" class="block px-4 py-2 hover:bg-orange-100 md:hover:bg-orange-500 md:px-0 md:py-1">Clima</a>
+            <a href="servicio-liderazgo.html" class="block px-4 py-2 hover:bg-orange-100 md:hover:bg-orange-500 md:px-0 md:py-1">Liderazgo</a>
+          </div>
+        </div>
+  
+        <a href="#contacto" class="block px-4 py-2 md:p-0 hover:text-white transition">Contacto</a>
+        <a href="en/index.html" class="inline-block bg-white text-orange-500 px-3 py-1 rounded font-semibold hover:bg-gray-100 transition mt-2 md:mt-0">EN</a>
+      </nav>
+    </div>
+  </header>
 
     <!-- Hero -->
    
@@ -328,24 +329,6 @@
       AOS.init({ duration: 800, once: true, offset: 100 });
     </script>
 
-    <!-- Script modular personalizado -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggleButton = document.getElementById("menu-toggle");
-        const navMenu = document.getElementById("nav-menu");
-
-        toggleButton.addEventListener("click", () => {
-          navMenu.classList.toggle("hidden");
-        });
-
-        navMenu.querySelectorAll("a").forEach(link => {
-          link.addEventListener("click", () => {
-            navMenu.classList.add("hidden");
-          });
-        });
-      });
-    </script>
-
     <!-- Scroll top button script -->
     <script>
       const scrollTopBtn = document.getElementById("scrollTopBtn");
@@ -372,6 +355,7 @@
       });
     </script>
     <!--End of Tawk.to Script-->
+    <script src="js/submenu.js"></script>
     
       </body>
     </html>
